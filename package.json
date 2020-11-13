@@ -1,0 +1,9 @@
+{
+  "name": "serial_websocket",
+  "version": "0.1.0",
+  "description": "simple test for serial and websockets",
+  "main": "server.js",
+  "repository": "https://github.com/s-light/nodejs_websocket_serial_test",
+  "author": "Stefan Krüger",
+  "license": "MIT"
+}
