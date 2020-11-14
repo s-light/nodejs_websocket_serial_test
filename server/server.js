@@ -33,7 +33,7 @@ function handle_serial_incoming(message) {
 var connection = undefined;
 
 // Serve up ui folder
-var serve = serveStatic('ui', { 'index': ['index.html', 'index.htm'] })
+var serve = serveStatic('../ui_test', { 'index': ['index.html', 'index.htm'] })
 
 
 // https://www.npmjs.com/package/websocket
@@ -90,6 +90,7 @@ function ws_on_message(message) {
             content += "\n"
         }
         console.log('Received Message: ' + content);
+        // https://nodejs.dev/learn/writing-files-with-nodejs#append-to-a-file
         fs.appendFile('./server_db/all.csv', content, err => {
           if (err) {
             console.error(err)
