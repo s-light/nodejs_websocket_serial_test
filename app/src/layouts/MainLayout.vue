@@ -49,13 +49,13 @@
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksData = [
-    {
-        title: 'Docs',
-        caption: 'quasar.dev',
-        icon: 'school',
-        link: 'https://quasar.dev',
-        target: '_blank'
-    },
+    // {
+    //     title: 'Docs',
+    //     caption: 'quasar.dev',
+    //     icon: 'school',
+    //     link: 'https://quasar.dev',
+    //     target: '_blank'
+    // },
     {
         title: 'Welcome',
         icon: 'home',
@@ -66,11 +66,26 @@ const linksData = [
         icon: 'code',
         link: 'test'
     },
-    // {
-    //     title: 'Serial',
-    //     icon: 'code',
-    //     link: '#serial'
-    // },
+    {
+        title: 'Step1: Package',
+        icon: 'aspect_ratio',
+        link: 'select_package'
+    },
+    {
+        title: 'Step2: Plants',
+        icon: 'local_florist',
+        link: 'select_plants'
+    },
+    {
+        title: 'Step3: Place',
+        icon: 'place',
+        link: 'select_place'
+    },
+    {
+        title: 'Save Entry',
+        icon: 'save_alt',
+        link: 'save_entry'
+    },
     {
         title: 'About',
         icon: 'help',
