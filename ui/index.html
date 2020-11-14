@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket demo</title>
+    </head>
+    <body>
+        <button type="button" name="button" onclick="ws_send_test()">Hello World</button>
+        <script>
+            var ws = new WebSocket("ws://127.0.0.1:8080/"),
+                messages = document.createElement('ul');
+            ws.onmessage = function (event) {
+                var messages = document.getElementsByTagName('ul')[0];
+                var message = document.createElement('li');
+                date = new Date().toISOString();
+                content_text = date  + " " + event.data;
+                var content = document.createTextNode(content_text);
+                messages.appendChild(message);
+                message.appendChild(content);
+                while (messages.childElementCount > 20) {
+                    messages.children[0].remove()
+                }
+            };
+            function ws_send_test() {
+                ws.send("Hello World!");
+                console.log("send message.");
+            }
+            document.body.appendChild(messages);
+        </script>
+    </body>
+</html>
