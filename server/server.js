@@ -39,12 +39,10 @@ var serve = serveStatic('../ui_test', { 'index': ['index.html', 'index.htm'] })
 // https://www.npmjs.com/package/websocket
 var server = http.createServer(function(request, response) {
     console.log((new Date()) + ' Received request for ' + request.url);
-    // response.writeHead(404);
-    // response.end();
     serve(request, response, finalhandler(request, response))
 });
 
-server.listen(8080, function() {
+server.listen(8082, function() {
     console.log((new Date()) + ' Server is listening on port 8080');
 });
 

@@ -3,16 +3,16 @@
         <q-header elevated>
             <q-toolbar>
                 <q-btn
-                flat
-                dense
-                round
-                icon="menu"
-                aria-label="Menu"
-                @click="leftDrawerOpen = !leftDrawerOpen"
+                    flat
+                    dense
+                    round
+                    icon="menu"
+                    aria-label="Menu"
+                    @click="leftDrawerOpen = !leftDrawerOpen"
                 />
 
                 <q-toolbar-title>
-                    Quasar App
+                    Serial Websocket Test
                 </q-toolbar-title>
 
                 <div>Quasar v{{ $q.version }}</div>
@@ -20,46 +20,29 @@
         </q-header>
 
         <q-drawer
-        v-model="leftDrawerOpen"
-        show-if-above
-        bordered
-        content-class="bg-grey-1"
+            v-model="leftDrawerOpen"
+            show-if-above
+            bordered
+            content-class="bg-grey-1"
         >
-        <q-list>
-            <q-item-label
-            header
-            class="text-grey-8"
-            >
-            Essential Links
-        </q-item-label>
-        <EssentialLink
-        v-for="link in essentialLinks"
-        :key="link.title"
-        v-bind="link"
-        />
-        <q-item
-        clickable
-        v-ripple
-        tag="a"
-        target="_self"
-        href="#/about"
-        >
-        <q-item-section avatar>
-            <q-icon name="help" />
-        </q-item-section>
-        <q-item-section>
-            <q-item-label>
-                About
-            </q-item-label>
-        </q-item-section>
-    </q-item>
-</q-list>
-</q-drawer>
-
-<q-page-container>
-    <router-view />
-</q-page-container>
-</q-layout>
+            <q-list>
+                <q-item-label
+                    header
+                    class="text-grey-8"
+                >
+                    Essential Links
+                </q-item-label>
+                <EssentialLink
+                    v-for="link in essentialLinks"
+                    :key="link.title"
+                    v-bind="link"
+                />
+            </q-list>
+        </q-drawer>
+        <q-page-container>
+            <router-view />
+        </q-page-container>
+    </q-layout>
 </template>
 
 <script>
@@ -70,13 +53,28 @@ const linksData = [
         title: 'Docs',
         caption: 'quasar.dev',
         icon: 'school',
-        link: 'https://quasar.dev'
+        link: 'https://quasar.dev',
+        target: '_blank'
+    },
+    {
+        title: 'Welcome',
+        icon: 'home',
+        link: 'welcome'
     },
     {
         title: 'Test',
-        caption: 'tests',
         icon: 'code',
-        link: 'https://github.com/quasarframework'
+        link: 'test'
+    },
+    // {
+    //     title: 'Serial',
+    //     icon: 'code',
+    //     link: '#serial'
+    // },
+    {
+        title: 'About',
+        icon: 'help',
+        link: 'about'
     }
 ]
 

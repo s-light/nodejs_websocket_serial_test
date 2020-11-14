@@ -12,7 +12,7 @@
                     target="_blank"
                     href="https://github.com/s-light/quasar_test"
                 >
-                    https://github.com/s-light/quasar_test
+                    https://github.com/s-light/nodejs_websocket_serial_test
                 </a>
             </p>
 
