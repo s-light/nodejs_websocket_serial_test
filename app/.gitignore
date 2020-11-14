@@ -4,7 +4,9 @@ node_modules
 
 # Quasar core related directories
 .quasar
-/dist
+# /dist
+# we want to have the spa build available
+# /dist/spa
 
 # Cordova related directories and files
 /src-cordova/node_modules
