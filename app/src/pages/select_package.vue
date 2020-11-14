@@ -1,45 +1,17 @@
 <template>
     <q-page class="flex flex-center">
-        <h1>TODO: implement load and view and Selection of package options</h1>
+        <h3>TODO: implement load and view and Selection of package options</h3>
+        <br>
+        <br>
         <q-btn-toggle
             v-model="model"
             push
             rounded
-            glossy
+            stack
+            size="20mm"
             toggle-color="purple"
-            :options="[
-                {value: 'one', slot: 'one'},
-                {value: 'two', slot: 'two'},
-                {value: 'three', slot: 'three'}
-            ]"
-        >
-        <template v-slot:one>
-            <div class="row items-center no-wrap">
-                <div class="text-center">
-                    Pick<br>boat
-                </div>
-                <q-icon right name="directions_boat" />
-            </div>
-        </template>
-
-        <template v-slot:two>
-            <div class="row items-center no-wrap">
-                <div class="text-center">
-                    Pick<br>car
-                </div>
-                <q-icon right name="directions_car" />
-            </div>
-        </template>
-
-        <template v-slot:three>
-            <div class="row items-center no-wrap">
-                <div class="text-center">
-                    Pick<br>railway
-                </div>
-                <q-icon right name="directions_railway" />
-            </div>
-        </template>
-    </q-btn-toggle>
+            :options="btn_list"
+        />
 </q-page>
 </template>
 
@@ -47,9 +19,82 @@
 export default {
     name: 'PageSelectPackage',
     data () {
-    return {
-            model: 'three'
+        return {
+            model: 'three',
+            btn_list: [
+                {
+                    label: 'boat',
+                    value: 'boat',
+                    icon: 'directions_boat',
+                    slot: 'one'
+                },
+                {
+                    label: 'car',
+                    value: 'car',
+                    icon: 'directions_car',
+                    slot: 'one'
+                },
+                {
+                    label: 'railway',
+                    value: 'railway',
+                    icon: 'directions_railway',
+                    slot: 'one'
+                },
+                {
+                    label: 'world',
+                    value: 'world',
+                    icon: 'pets',
+                    slot: 'one'
+                },
+                {
+                    label: 'car',
+                    value: 'car',
+                    icon: 'directions_car',
+                    slot: 'one'
+                },
+                {
+                    label: 'railway',
+                    value: 'railway',
+                    icon: 'directions_railway',
+                    slot: 'one'
+                },
+                {
+                    label: 'world',
+                    value: 'world',
+                    icon: 'pets',
+                    slot: 'one'
+                },
+                {
+                    label: 'car',
+                    value: 'car',
+                    icon: 'directions_car',
+                    slot: 'one'
+                },
+                {
+                    label: 'railway',
+                    value: 'railway',
+                    icon: 'directions_railway',
+                    slot: 'one'
+                },
+                {
+                    label: 'world',
+                    value: 'world',
+                    icon: 'pets',
+                    slot: 'one'
+                },
+                {
+                    label: 'test',
+                    value: 'test',
+                    icon: 'directions_boat',
+                    slot: 'one'
+                }
+            ]
         }
+    },
+    filters: {
+    },
+    components: {
     }
 }
+
 </script>
