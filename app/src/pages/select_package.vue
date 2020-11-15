@@ -1,100 +1,47 @@
 <template>
-    <q-page class="flex flex-center">
-        <h3>TODO: implement load and view and Selection of package options</h3>
-        <br>
-        <br>
-        <q-btn-toggle
-            v-model="model"
-            push
-            rounded
-            stack
-            size="20mm"
-            toggle-color="purple"
-            :options="btn_list"
+    <q-page class="flex flex-center col">
+        <div class="shadow-10">
+            selectedValue '{{ selectedValue }}' <br>
+            btnList '{{ btnList }}' <br>
+        </div>
+        <btn-test
+            v-model="selectedValue"
+            :options="btnList"
         />
 </q-page>
 </template>
 
+<!-- v-bind:value.sync="selectedValue" -->
+<!-- v-model="selectedValue" -->
 <script>
+import BtnTest from 'components/BtnTest.vue'
+
 export default {
     name: 'PageSelectPackage',
     data () {
         return {
-            model: 'three',
-            btn_list: [
+            selectedValue: 'car',
+            btnList: [
                 {
                     label: 'boat',
                     value: 'boat',
-                    icon: 'directions_boat',
-                    slot: 'one'
+                    icon: 'directions_boat'
                 },
                 {
                     label: 'car',
                     value: 'car',
-                    icon: 'directions_car',
-                    slot: 'one'
+                    icon: 'directions_car'
                 },
                 {
                     label: 'railway',
                     value: 'railway',
-                    icon: 'directions_railway',
-                    slot: 'one'
-                },
-                {
-                    label: 'world',
-                    value: 'world',
-                    icon: 'pets',
-                    slot: 'one'
-                },
-                {
-                    label: 'car',
-                    value: 'car',
-                    icon: 'directions_car',
-                    slot: 'one'
-                },
-                {
-                    label: 'railway',
-                    value: 'railway',
-                    icon: 'directions_railway',
-                    slot: 'one'
-                },
-                {
-                    label: 'world',
-                    value: 'world',
-                    icon: 'pets',
-                    slot: 'one'
-                },
-                {
-                    label: 'car',
-                    value: 'car',
-                    icon: 'directions_car',
-                    slot: 'one'
-                },
-                {
-                    label: 'railway',
-                    value: 'railway',
-                    icon: 'directions_railway',
-                    slot: 'one'
-                },
-                {
-                    label: 'world',
-                    value: 'world',
-                    icon: 'pets',
-                    slot: 'one'
-                },
-                {
-                    label: 'test',
-                    value: 'test',
-                    icon: 'directions_boat',
-                    slot: 'one'
+                    icon: 'directions_railway'
                 }
             ]
         }
     },
-    filters: {
-    },
     components: {
+        BtnTest
     }
 }
-
 </script>

@@ -64,7 +64,7 @@ export default {
     data () {
         return {
             ws: new WebSocket('ws://127.0.0.1:8082/'),
-            current_weight: 0,
+            current_weight: '- - - -',
             messagaeToSend: 'Hello World :-)',
             log: undefined
         }

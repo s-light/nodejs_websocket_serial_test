@@ -68,7 +68,7 @@ import LogView from 'components/LogView.vue'
 // :loading="ws.readyState === ws.CONNECTING || ws.readyState === ws.CLOSING"
 
 export default {
-    name: 'PageTest',
+    name: 'PageDev',
     data () {
         return {
             ws: new WebSocket('ws://127.0.0.1:8082/'),
