@@ -9,8 +9,8 @@
             <br>
         </section>
         <q-btn-toggle-grid
-            v-model="selectedValue"
-            :options="btn_list"
+            v-model="package_selected"
+            :options="package_options"
             active-class="bg-orange"
             push
             rounded
@@ -24,90 +24,24 @@
 import QBtnToggleGrid from 'components/QBtnToggleGrid.vue'
 
 export default {
-    name: 'PageSelectPlace',
+    name: 'PageSelectPackage',
     data () {
         return {
             selectedValue: 'car',
-            btn_list: [
-                {
-                    label: 'boat',
-                    value: 'boat',
-                    icon: 'directions_boat'
-                },
-                {
-                    label: 'car',
-                    value: 'car',
-                    icon: 'directions_car'
-                },
-                {
-                    label: 'railway',
-                    value: 'railway',
-                    icon: 'directions_railway'
-                },
-                {
-                    label: 'world',
-                    value: 'world',
-                    icon: 'pets'
-                },
-                {
-                    label: 'sun',
-                    value: 'sun',
-                    icon: 'wb_sunny'
-                },
-                {
-                    label: 'rain',
-                    value: 'rain',
-                    icon: 'umbrella'
-                },
-                {
-                    label: 'cloud',
-                    value: 'cloud',
-                    icon: 'cloud'
-                },
-                {
-                    label: 'wind',
-                    value: 'wind',
-                    icon: 'toys'
-                },
-                {
-                    label: 'railway',
-                    value: 'railway',
-                    icon: 'directions_railway'
-                },
-                {
-                    label: 'world',
-                    value: 'world',
-                    icon: 'pets'
-                },
-                {
-                    label: 'test',
-                    value: 'test',
-                    icon: 'directions_boat'
-                },
-                {
-                    label: 'sun',
-                    value: 'sun',
-                    icon: 'wb_sunny'
-                },
-                {
-                    label: 'water',
-                    value: 'water',
-                    icon: 'umbrella'
-                },
-                {
-                    label: 'web',
-                    value: 'web',
-                    icon: 'cloud'
-                },
-                {
-                    label: 'storm',
-                    value: 'storm',
-                    icon: 'toys'
-                }
-            ]
+            btn_list: []
         }
     },
     filters: {
+    },
+    computed: {
+        localComputedExample () { /* ... */ },
+        // mix this into the outer object with the object spread operator
+        ...mapState([
+            // https://vuex.vuejs.org/guide/state.html#the-mapstate-helper
+            // map this.count to store.state.count
+            'package_selected',
+            'package_options'
+        ])
     },
     components: {
         QBtnToggleGrid

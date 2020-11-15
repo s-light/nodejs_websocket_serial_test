@@ -1,20 +1,21 @@
 <template>
-    <q-page class="flex flex-center">
-        <h3>TODO: implement load and view and Selection of package options</h3>
-        <h1>TODO: implement load and view and Selection of Place options</h1>
-        <br>
-        <p>
-            model: {{ selectedValue }}
-        </p>
-        <br>
+    <q-page class="">
+        <section class="center">
+            <p>TODO: implement load and view and Selection of Place options</p>
+            <br>
+            <p>
+                selectedValue: {{ selectedValue }}
+            </p>
+            <br>
+        </section>
         <q-btn-toggle-grid
             v-model="selectedValue"
             :options="btn_list"
-            active-class="background-orange"
+            active-class="bg-orange"
             push
             rounded
             stack
-            size="20mm"
+            size="40mm"
         />
 </q-page>
 </template>
@@ -51,12 +52,12 @@ export default {
                 {
                     label: 'sun',
                     value: 'sun',
-                    icon: 'sun'
+                    icon: 'wb_sunny'
                 },
                 {
                     label: 'rain',
                     value: 'rain',
-                    icon: 'rain'
+                    icon: 'umbrella'
                 },
                 {
                     label: 'cloud',
@@ -66,7 +67,7 @@ export default {
                 {
                     label: 'wind',
                     value: 'wind',
-                    icon: 'wind'
+                    icon: 'toys'
                 },
                 {
                     label: 'railway',
@@ -82,6 +83,26 @@ export default {
                     label: 'test',
                     value: 'test',
                     icon: 'directions_boat'
+                },
+                {
+                    label: 'sun',
+                    value: 'sun',
+                    icon: 'wb_sunny'
+                },
+                {
+                    label: 'water',
+                    value: 'water',
+                    icon: 'umbrella'
+                },
+                {
+                    label: 'web',
+                    value: 'web',
+                    icon: 'cloud'
+                },
+                {
+                    label: 'storm',
+                    value: 'storm',
+                    icon: 'toys'
                 }
             ]
         }
