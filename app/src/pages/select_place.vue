@@ -4,38 +4,29 @@
         <h1>TODO: implement load and view and Selection of Place options</h1>
         <br>
         <p>
-            model: {{ model }}
+            model: {{ selectedValue }}
         </p>
         <br>
         <q-btn-toggle-grid
-            v-model="model"
+            v-model="selectedValue"
+            :options="btn_list"
+            active-class="background-orange"
             push
             rounded
             stack
             size="20mm"
-            toggle-color="purple"
-            :options="btn_list"
         />
 </q-page>
 </template>
 
 <script>
-// <q-btn-toggle
-// v-model="model"
-// push
-// rounded
-// stack
-// size="20mm"
-// toggle-color="purple"
-// :options="btn_list"
-// />
 import QBtnToggleGrid from 'components/QBtnToggleGrid.vue'
 
 export default {
     name: 'PageSelectPlace',
     data () {
         return {
-            model: 'car',
+            selectedValue: 'car',
             btn_list: [
                 {
                     label: 'boat',
