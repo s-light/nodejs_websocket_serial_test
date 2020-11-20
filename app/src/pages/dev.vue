@@ -13,10 +13,10 @@
             label="reconnect"
             :disable="ws.readyState !== ws.CLOSED"
         >
-            <template v-slot:loading>
+            <template #loading>
                 <q-spinner-gears />
             </template>
-            <template v-slot:after>
+            <template #after>
                 <q-icon
                     name="close"
                 />
@@ -38,7 +38,7 @@
                 v-model="messagaeToSend"
                 @keyup.enter="messageSend()"
             >
-                <template v-slot:append>
+                <template #append>
                     <q-icon
                         :style="{opacity: (messagaeToSend !== '' ? 'inherit' : '0.1')}"
                         name="close"
@@ -46,7 +46,7 @@
                         class="cursor-pointer"
                     />
                 </template>
-                <template v-slot:after>
+                <template #after>
                     <q-btn
                         round
                         v-ripple

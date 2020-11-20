@@ -34,14 +34,14 @@ export default {
     filters: {
     },
     computed: {
-        localComputedExample () { /* ... */ },
+        localComputedExample () { return 0 }
         // mix this into the outer object with the object spread operator
-        ...mapState([
-            // https://vuex.vuejs.org/guide/state.html#the-mapstate-helper
-            // map this.count to store.state.count
-            'package_selected',
-            'package_options'
-        ])
+        // ...mapState([
+        //     // https://vuex.vuejs.org/guide/state.html#the-mapstate-helper
+        //     // map this.count to store.state.count
+        //     'package_selected',
+        //     'package_options'
+        // ])
     },
     components: {
         QBtnToggleGrid

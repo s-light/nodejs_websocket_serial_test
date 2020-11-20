@@ -28,8 +28,8 @@ export default function (/* { ssrContext } */) {
     })
 
     if (process.env.DEV && module.hot) {
-        module.hot.accept(['./app_config'], () => {
-            const newAppConfig = require('./app_config').default
+        module.hot.accept(['./appconfig'], () => {
+            const newAppConfig = require('./appconfig').default
             Store.hotUpdate({ modules: { appconfig: newAppConfig } })
         })
     }
