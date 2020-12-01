@@ -71,7 +71,7 @@ export default {
     name: 'PageDev',
     data () {
         return {
-            ws: new WebSocket('ws://127.0.0.1:8082/'),
+            ws: new WebSocket('ws://127.0.0.1:9090/'),
             current_weight: '- - - -',
             messagaeToSend: 'Hello World :-)',
             log: undefined
@@ -117,7 +117,7 @@ export default {
         },
         setup_ws_connection () {
             this.ws = null
-            this.ws = new WebSocket('ws://127.0.0.1:8082/')
+            this.ws = new WebSocket('ws://127.0.0.1:9090/')
             console.log('created websocket server')
             this.ws.onmessage = this.messageReceive
             this.ws.onopen = this.onopen

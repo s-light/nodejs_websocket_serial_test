@@ -63,7 +63,7 @@ export default {
     name: 'PageSaveEntry',
     data () {
         return {
-            ws: new WebSocket('ws://127.0.0.1:8082/'),
+            ws: new WebSocket('ws://127.0.0.1:9090/'),
             current_weight: '- - - -',
             messagaeToSend: 'Hello World :-)',
             log: undefined
@@ -95,21 +95,21 @@ export default {
         },
         onopen (event) {
             console.log('WebSocket is open now.', event)
-            this.$refs.mylog.addEntryIn(event.type)
+            // this.$refs.mylog.addEntryIn(event.type)
         },
         onclose (event) {
             console.log('WebSocket is closed now.', event)
-            this.$refs.mylog.addEntryIn(event.type)
+            // this.$refs.mylog.addEntryIn(event.type)
             this.current_weight = '- - - -'
         },
         onerror (event) {
             console.log('WebSocket error:', event)
-            this.$refs.mylog.addEntryIn(event.type)
+            // this.$refs.mylog.addEntryIn(event.type)
             this.current_weight = '- - - -'
         },
         setup_ws_connection () {
             this.ws = null
-            this.ws = new WebSocket('ws://127.0.0.1:8082/')
+            this.ws = new WebSocket('ws://127.0.0.1:9090/')
             console.log('created websocket server')
             this.ws.onmessage = this.messageReceive
             this.ws.onopen = this.onopen
